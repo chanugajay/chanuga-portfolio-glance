@@ -1,4 +1,6 @@
 
+import { Briefcase, React, NodeJs, Flask, PowerAutomate } from "lucide-react";
+
 const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-900/30">
@@ -12,33 +14,44 @@ const ExperienceSection = () => {
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-4">Full Stack Developer</p>
 
-            <h4 className="font-semibold mb-2">Responsibilities:</h4>
+            <h4 className="font-semibold mb-2">Key Projects:</h4>
             <ul className="list-disc pl-5 mb-4 space-y-2">
               <li>
-                Developed a Vehicle Invoice Management System using PHP, JavaScript, and SharePoint.
+                Developed a Vendor Invoice Management System using PowerApps and SharePoint
+                to automate invoice submission and approval workflows.
               </li>
               <li>
-                Created custom functions in VBA for spreadsheets with complex calculations.
+                Built a Meal Ordering System for internal staff using React (frontend), Flask (API), and
+                Node.js (backend services), enabling real-time meal ordering and tracking.
               </li>
               <li>
-                Maintained team dashboards featuring KPI metrics using Power BI and Excel.
-              </li>
-              <li>
-                Implemented backend services, enabling real-time meal ordering and tracking.
-              </li>
-              <li>
-                Gained experience with enterprise-level source control, testing, and deployment.
+                Gained hands-on experience with SAP for invoice tracking, procurement, and internal
+                data management.
               </li>
             </ul>
 
             <h4 className="font-semibold mb-2">Technologies Used:</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm">PHP</span>
-              <span className="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
-              <span className="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm">SharePoint</span>
-              <span className="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm">VBA</span>
-              <span className="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm">Power BI</span>
-              <span className="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-sm">Excel</span>
+            <div className="flex flex-wrap gap-3 mb-4">
+              <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
+                <PowerAutomate className="w-4 h-4" />
+                <span>PowerApps</span>
+              </div>
+              <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
+                <React className="w-4 h-4" />
+                <span>React</span>
+              </div>
+              <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
+                <NodeJs className="w-4 h-4" />
+                <span>Node.js</span>
+              </div>
+              <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
+                <Flask className="w-4 h-4" />
+                <span>Flask</span>
+              </div>
+              <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
+                <PowerAutomate className="w-4 h-4" />
+                <span>Power Automate</span>
+              </div>
             </div>
           </div>
         </div>
