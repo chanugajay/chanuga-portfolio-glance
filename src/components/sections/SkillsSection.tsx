@@ -3,30 +3,35 @@ import { Progress } from "@/components/ui/progress";
 
 const SkillsSection = () => {
   const techSkills = [
+    { name: "Python", level: 90 },
+    { name: "JavaScript", level: 85 },
+    { name: "TypeScript", level: 80 },
+    { name: "Java", level: 75 },
     { name: "HTML", level: 90 },
     { name: "CSS", level: 85 },
-    { name: "JavaScript", level: 80 },
-    { name: "React.js", level: 75 },
-    { name: "Node.js", level: 70 },
-    { name: "Python", level: 85 },
-    { name: "TensorFlow", level: 65 },
-    { name: "OpenCV", level: 75 },
-    { name: "scikit-learn", level: 70 },
-    { name: "jQuery", level: 80 },
-    { name: "SQL", level: 75 },
-    { name: "Git", level: 80 },
+    { name: "SQL", level: 80 },
+    { name: "React.js", level: 85 },
+    { name: "Node.js", level: 80 },
+    { name: "Flask", level: 75 },
+    { name: "TensorFlow", level: 75 },
+    { name: "Keras", level: 70 },
+    { name: "OpenCV", level: 80 },
+    { name: "scikit-learn", level: 75 },
+    { name: "TextRank", level: 70 },
+    { name: "jQuery UI", level: 75 },
+    { name: "CNN", level: 70 },
+    { name: "Image preprocessing (CLAHE)", level: 75 },
+    { name: "Git", level: 85 },
+    { name: "GitHub", level: 85 },
+    { name: "Jira", level: 75 },
+    { name: "SAP", level: 65 },
   ];
 
   const softSkills = [
+    "Problem-solving",
+    "Agile team collaboration",
     "Quick learning and adaptability",
-    "Problem-solving skills",
-    "Attention to detail",
-    "Teamwork and collaboration",
-    "Communication",
-    "Time management",
-    "Multitasking",
-    "Remote work",
-    "Application deployment and maintenance",
+    "Application deployment and maintenance"
   ];
 
   return (
@@ -50,7 +55,7 @@ const SkillsSection = () => {
           </div>
           <div>
             <h3 className="text-2xl font-bold mb-6">Soft Skills</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {softSkills.map((skill, index) => (
                 <div
                   key={index}
