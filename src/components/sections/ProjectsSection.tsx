@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Python, React, Server, FileCode, Code } from "lucide-react";
+import { Code2, FileJson, Server, FileCode, Code } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
@@ -86,9 +86,9 @@ const ProjectsSection = () => {
 const getProjectIcon = (iconName: string, className: string) => {
   switch (iconName.toLowerCase()) {
     case 'python':
-      return <Python className={className} />;
+      return <Code2 className={className} />; // Changed from Python to Code2
     case 'react':
-      return <React className={className} />;
+      return <FileJson className={className} />; // Changed from React to FileJson
     case 'node':
     case 'nodejs':
       return <Server className={className} />;
