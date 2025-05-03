@@ -8,12 +8,12 @@ const EducationSection = () => {
     },
     {
       degree: "GCE Advanced Level - Physical Science",
-      institution: "Prince of Wales College, Colombo 10",
+      institution: "Thurstan College, Colombo 07",
       period: "2018 - 2020",
     },
     {
       degree: "G. C. E. Ordinary Level Examination",
-      institution: "",
+      institution: "Thurstan College, Colombo 07",
       period: "2017",
     },
   ];
