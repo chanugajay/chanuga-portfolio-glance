@@ -1,32 +1,48 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Python, React, Server, FileCode, Code } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Image Enhancement and Early Stage Diabetic Retinopathy Detection Web Application",
-      description: "Developed a web application that automates the detection of diabetic retinopathy in retinal images by enhancing MRI images and detecting diabetic retinopathy symptoms. A comprehensive system for enhancing, MRI images and detecting diabetic retinopathy symptoms. It utilizes advanced algorithms for image enhancement and detection of microaneurysms, hemorrhages, hard exudates, soft exudates, and cotton wool spots.",
-      technologies: ["Python", "TensorFlow", "React", "OpenCV", "scikit-learn", "Flask"],
+      title: "Image Enhancement and Early-Stage Ankylosing Spondylitis Detection Web Application",
+      description: "This was a final year research project. Developed a deep learning-based diagnostic tool for enhancing MRI images and detecting Ankylosing Spondylitis, a chronic inflammatory spinal disease. The system integrates image preprocessing using CLAHE to improve image clarity and employs a fine-tuned VGG16 convolutional neural network to classify MRI scans. Supporting reliable early-stage detection and aiding radiologists in diagnosis.",
+      technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "VGG16", "CLAHE", "scikit-learn", "React JS", "TypeScript", "Node.js", "Flask"],
+      icons: {
+        primary: "Python"
+      }
     },
     {
-      title: "Hand Gesture Recognition and Emotion Detection Web Application",
-      description: "Created an app that performs real-time hand gesture recognition and emotional response analysis. The project involved developing a model for hand gesture recognition, implementing emotional response detection, and analyzing correlations between gestures and emotions.",
-      technologies: ["Python", "OpenCV", "MediaPipe", "scikit-learn", "TensorFlow", "Keras"],
-    },
-    {
-      title: "E-Commerce Based E3 Enterprise Health Centre",
-      description: "Built an e-commerce web application for health products, featuring an online consultation where patients can consult doctors, book appointments, and purchase medical products. Implemented secure management and marketing functionalities.",
-      technologies: ["HTML", "CSS", "jQuery", "JavaScript"],
+      title: "Hotel Review Summarization and Emotion Detection Web Application",
+      description: "This was the 2nd year Software Development Group Project. The project involved building a web-based application that summarizes hotel reviews and detects the sentiment expressed in the text. It uses machine learning to classify reviews as positive, negative, or neutral, while also providing statistical insights into the most common emotions detected. Frontend developer, backend team member.",
+      technologies: ["Python", "Flask", "React JS", "Node.js", "TextRank"],
+      icons: {
+        primary: "Python"
+      }
     },
     {
       title: "Estate Agent Client-side Web Application",
-      description: "Created a web application that enables users to search properties by different parameters such as price and location. Implemented features like property filtering and detailed property views.",
-      technologies: ["HTML", "CSS", "jQuery", "JavaScript"],
+      description: "A client-side web application that enables a user to search properties by different criteria such as price and location. Implemented features like property filtering and detailed property views.",
+      technologies: ["HTML", "CSS", "jQuery UI", "JSON", "JavaScript"],
+      icons: {
+        primary: "Html"
+      }
     },
     {
-      title: "Wearhouse Stock Ecommerce selling website",
-      description: "Developed an e-commerce website for selling DJ equipment, featuring admin management functionalities and a complete online shopping experience.",
-      technologies: ["ReactJS", "Express"],
+      title: "Westminster Skin Consultation",
+      description: "A system to manage skin consultation where patients can consult doctors. Implemented secure patient-doctor communication and appointment scheduling.",
+      technologies: ["Java"],
+      icons: {
+        primary: "Java"
+      }
+    },
+    {
+      title: "E-Commerce Based DJ Equipment Selling Website",
+      description: "Developed an e-commerce website for selling DJ equipment, featuring secure transactions, product management, and a user-friendly interface.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      icons: {
+        primary: "Html"
+      }
     },
   ];
 
@@ -34,14 +50,17 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Projects</h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
+            <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-shadow border-primary/10">
+              <CardHeader className="pb-2">
+                <div className="flex items-center gap-3">
+                  {getProjectIcon(project.icons.primary, "w-6 h-6 text-primary")}
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                </div>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <CardDescription className="text-sm text-gray-600 dark:text-gray-400 line-clamp-4">
+              <CardContent className="flex-grow py-3">
+                <CardDescription className="text-sm text-gray-600 dark:text-gray-400">
                   {project.description}
                 </CardDescription>
               </CardContent>
@@ -61,6 +80,26 @@ const ProjectsSection = () => {
       </div>
     </section>
   );
+};
+
+// Helper function to get the appropriate icon based on the primary technology
+const getProjectIcon = (iconName: string, className: string) => {
+  switch (iconName.toLowerCase()) {
+    case 'python':
+      return <Python className={className} />;
+    case 'react':
+      return <React className={className} />;
+    case 'node':
+    case 'nodejs':
+      return <Server className={className} />;
+    case 'html':
+      return <FileCode className={className} />;
+    case 'javascript':
+    case 'java':
+      return <Code className={className} />;
+    default:
+      return <Code className={className} />;
+  }
 };
 
 export default ProjectsSection;
