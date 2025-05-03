@@ -1,5 +1,5 @@
 
-import { Briefcase, React, NodeJs, Flask, PowerAutomate } from "lucide-react";
+import { Briefcase, Code, Server, Settings, FileArchive } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
@@ -33,23 +33,23 @@ const ExperienceSection = () => {
             <h4 className="font-semibold mb-2">Technologies Used:</h4>
             <div className="flex flex-wrap gap-3 mb-4">
               <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
-                <PowerAutomate className="w-4 h-4" />
+                <Settings className="w-4 h-4" />
                 <span>PowerApps</span>
               </div>
               <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
-                <React className="w-4 h-4" />
+                <Code className="w-4 h-4" />
                 <span>React</span>
               </div>
               <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
-                <NodeJs className="w-4 h-4" />
+                <Server className="w-4 h-4" />
                 <span>Node.js</span>
               </div>
               <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
-                <Flask className="w-4 h-4" />
+                <Briefcase className="w-4 h-4" />
                 <span>Flask</span>
               </div>
               <div className="flex items-center gap-1 bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded-full text-sm">
-                <PowerAutomate className="w-4 h-4" />
+                <FileArchive className="w-4 h-4" />
                 <span>Power Automate</span>
               </div>
             </div>
