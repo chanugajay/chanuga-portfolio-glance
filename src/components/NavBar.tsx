@@ -18,6 +18,7 @@ const NavBar = () => {
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "CV", href: "#cv" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -93,7 +94,19 @@ const NavBar = () => {
           ))}
           <div className="ml-4 flex items-center space-x-2">
             <ThemeSwitch />
-            <Button variant="outline" size="sm" className="ml-2 flex items-center">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="ml-2 flex items-center"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/cv.pdf';
+                link.download = 'Chanuga_Jayarathne_CV.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="h-4 w-4 mr-1" />
               CV
             </Button>
@@ -166,7 +179,19 @@ const NavBar = () => {
             </a>
           ))}
           <div className="px-3 py-2">
-            <Button variant="outline" size="sm" className="w-full flex items-center justify-center">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="w-full flex items-center justify-center"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/cv.pdf';
+                link.download = 'Chanuga_Jayarathne_CV.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="h-4 w-4 mr-1" />
               Download CV
             </Button>
