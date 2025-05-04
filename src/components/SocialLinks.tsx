@@ -51,7 +51,7 @@ const SocialLinks = ({
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-primary transition-colors duration-300"
-          aria-label={link.name}
+          aria-label={`Visit my ${link.name} profile`}
         >
           <link.icon size={iconSize} />
         </a>
